@@ -8,7 +8,7 @@ const routes: Routes = [
   
   { path: '', component: MovieListComponent },
   { path: 'movie/:id', component: MovieDetailsComponent },
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: 'search' }
 ];
 
 @NgModule({

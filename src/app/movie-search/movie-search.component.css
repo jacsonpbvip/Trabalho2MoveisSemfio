@@ -1,21 +1,11 @@
-.search-container {
-    padding: 20px;
+.highlight-title {
+    margin-top: 10%;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center; /* Centraliza o texto */
   }
   
-  .loading-label, .error-label {
-    margin-top: 10px;
-    text-align: center;
-    color: red;
-  }
-  
-  .results-container {
-    margin-top: 20px;
-  }
-  
-  .results-container Label {
-    margin-bottom: 10px;
-    font-size: 18px;
-  }
   .movie-item {
     margin-bottom: 20px;
   }
@@ -27,18 +17,14 @@
   
   .movie-overview {
     font-size: 14px;
+    word-wrap: break-word; /* Quebra a palavra se necessário */
+    white-space: normal; /* Permite quebra de linha */
+    margin-top: 5px; /* Espaçamento entre título e descrição */
   }
   
-  .error-label {
+  .loading-label, .error-label {
+    margin-top: 10px;
+    text-align: center;
     color: red;
   }
-
-  .highlight-title {
-    margin-top: 10%;
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px 0;
-    text-align: center; /* Centraliza o texto */
-  }
   
-   

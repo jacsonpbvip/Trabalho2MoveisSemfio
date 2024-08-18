@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'; // Certifique-se de importar Router
 import { MovieService } from '../services/movie.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class MovieSearchComponent implements OnInit {
   isLoading: boolean = false;
   errorMessage: string = '';
 
-  constructor(private movieService: MovieService) { }
+  constructor(private movieService: MovieService, private router: Router) { } // Certifique-se de adicionar Router
 
   ngOnInit(): void { }
 
@@ -22,26 +23,25 @@ export class MovieSearchComponent implements OnInit {
 
   findMovieByTitle(): void {
     if (this.query.trim() === '') {
-      this.errorMessage = 'Por favor, insira um nome de filme válido.';
+      this.errorMessage = 'Please enter a valid movie title.';
       return;
     }
     
     this.isLoading = true;
     this.movieService.searchMoviesByTitle(this.query).subscribe(
       (data) => {
-        if (data && data.results) {
-          this.searchResults = data.results;
-          this.errorMessage = this.searchResults.length === 0 ? 'Nenhum filme encontrado!' : '';
-        } else {
-          this.errorMessage = 'Nenhum resultado encontrado.';
-        }
+        this.searchResults = data.results;
+        this.errorMessage = this.searchResults.length === 0 ? 'No movies found!' : '';
         this.isLoading = false;
       },
       (error) => {
-        console.error('Erro ao buscar filmes:', error);
         this.isLoading = false;
-        this.errorMessage = 'Erro ao buscar filmes. Tente novamente.';
+        this.errorMessage = 'Error fetching movies. Please try again.';
       }
     );
+  }
+  
+   onMovieTap(movie: any): void {
+    this.router.navigate(['/movie', movie.id]);
   }
 }

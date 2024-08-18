@@ -22,7 +22,6 @@ export class MovieDetailsComponent implements OnInit {
       return;
     }
 
-    // Usar o método para buscar os detalhes do filme
     this.movieService.getMovieDetails(id).subscribe(
       (response) => {
         this.movie = response;

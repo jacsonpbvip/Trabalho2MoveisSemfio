@@ -1,16 +1,18 @@
-<StackLayout>
+<StackLayout class="search-container">
     <Label text="Search for a movie" class="highlight-title"></Label>
     <!-- Search field and button -->
     <TextField [text]="query" (textChange)="onQueryChange($event)" hint="Enter movie title"></TextField>
     <Button text="Search" (tap)="findMovieByTitle()"></Button>
-    <Label *ngIf="isLoading" text="Loading..."></Label>
+    <Label *ngIf="isLoading" text="Loading..." class="loading-label"></Label>
     <Label *ngIf="errorMessage" [text]="errorMessage" class="error-label"></Label>
     
     <!-- ScrollView to allow scrolling -->
     <ScrollView *ngIf="!isLoading && searchResults.length > 0">
-      <StackLayout>
+      <StackLayout class="results-container">
         <StackLayout *ngFor="let item of searchResults" class="movie-item">
-          <Image [src]="item.poster_path ? 'https://image.tmdb.org/t/p/w500' + item.poster_path : 'path/to/placeholder-image.png'" height="200"/>
+          <Image [src]="item.poster_path ? 'https://image.tmdb.org/t/p/w500' + item.poster_path : 'path/to/placeholder-image.png'"
+                 height="200"
+                 (tap)="onMovieTap(item)"/> <!-- Adicione o evento tap aqui -->
           <Label [text]="item.original_title" class="movie-title"></Label>
           <Label [text]="item.overview" class="movie-overview"></Label>
         </StackLayout>
