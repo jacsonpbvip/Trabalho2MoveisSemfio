@@ -1,12 +1,12 @@
 <StackLayout>
-    <Label text="Procure um filme" class="highlight-title"></Label>
-    <!-- Campo de busca e botão -->
-    <TextField [text]="query" (textChange)="onQueryChange($event)" hint="Digite o título do filme"></TextField>
-    <Button text="Buscar" (tap)="findMovieByTitle()"></Button>
-    <Label *ngIf="isLoading" text="Carregando..."></Label>
+    <Label text="Search for a movie" class="highlight-title"></Label>
+    <!-- Search field and button -->
+    <TextField [text]="query" (textChange)="onQueryChange($event)" hint="Enter movie title"></TextField>
+    <Button text="Search" (tap)="findMovieByTitle()"></Button>
+    <Label *ngIf="isLoading" text="Loading..."></Label>
     <Label *ngIf="errorMessage" [text]="errorMessage" class="error-label"></Label>
     
-    <!-- ScrollView para permitir rolagem -->
+    <!-- ScrollView to allow scrolling -->
     <ScrollView *ngIf="!isLoading && searchResults.length > 0">
       <StackLayout>
         <StackLayout *ngFor="let item of searchResults" class="movie-item">
@@ -16,5 +16,4 @@
         </StackLayout>
       </StackLayout>
     </ScrollView>
-  </StackLayout>
-  
+</StackLayout>
