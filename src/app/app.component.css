@@ -1,0 +1,14 @@
+/* Exemplo de CSS para ajustar o layout */
+GridLayout {
+    width: 100%;
+    height: 100%;
+  }
+  
+  app-movie-search {
+    margin-bottom: 10px;
+  }
+  
+  StackLayout {
+    padding: 10px;
+  }
+  

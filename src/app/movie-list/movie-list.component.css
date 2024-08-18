@@ -4,33 +4,39 @@
   }
   
   .movie-card {
-    width: 350px; /* Ajuste conforme necessário */
-    margin-right: 10px; /* Espaço entre cartões */
+    width: 350px; 
+    margin-right: 10px; 
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 10px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza horizontalmente */
-    justify-content: center; /* Centraliza verticalmente */
-    text-align: center; /* Centraliza o texto */
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
   }
   
   .movie-poster {
     width: 100%;
-    height: 600px; /* Ajuste conforme necessário */
-    object-fit: cover; /* Mantém a proporção da imagem */
+    height: 600px; 
+    object-fit: cover;
   }
   
   .movie-title {
     font-weight: bold;
     margin-top: 5px;
-    margin-bottom: 5px; /* Espaçamento entre título e sinopse */
+    margin-bottom: 5px;
   }
   
   .movie-overview {
     margin-top: 5px;
-    text-align: center; /* Centraliza o texto da sinopse */
+    text-align: center;
+  }
+  .highlight-title {    
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
   }
   

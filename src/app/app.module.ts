@@ -6,21 +6,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { MovieSearchComponent } from './movie-search/movie-search.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieListComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    MovieSearchComponent
   ],
   imports: [
-    NativeScriptModule, // Substitui o BrowserModule
-    NativeScriptRouterModule, // Adiciona suporte para roteamento NativeScript
+    FormsModule,
+    NativeScriptModule, 
+    NativeScriptRouterModule, 
     HttpClientModule,
     AppRoutingModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [NO_ERRORS_SCHEMA] // Adiciona suporte para elementos específicos do NativeScript
+  schemas: [NO_ERRORS_SCHEMA]
 })
 export class AppModule {}

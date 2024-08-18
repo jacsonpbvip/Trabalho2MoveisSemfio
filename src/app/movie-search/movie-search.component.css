@@ -1,0 +1,44 @@
+.search-container {
+    padding: 20px;
+  }
+  
+  .loading-label, .error-label {
+    margin-top: 10px;
+    text-align: center;
+    color: red;
+  }
+  
+  .results-container {
+    margin-top: 20px;
+  }
+  
+  .results-container Label {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  .movie-item {
+    margin-bottom: 20px;
+  }
+  
+  .movie-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .movie-overview {
+    font-size: 14px;
+  }
+  
+  .error-label {
+    color: red;
+  }
+
+  .highlight-title {
+    margin-top: 10%;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center; /* Centraliza o texto */
+  }
+  
+   

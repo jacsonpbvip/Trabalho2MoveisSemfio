@@ -1,4 +1,9 @@
-<ScrollView orientation="horizontal">
+<StackLayout>
+  <!-- Título para os filmes em destaque -->
+  <Label text="Filmes em destaque" class="highlight-title"></Label>
+
+  <!-- ScrollView horizontal para filmes em destaque -->
+  <ScrollView orientation="horizontal">
     <StackLayout orientation="horizontal" class="movie-list">
       <ng-container *ngFor="let movie of movies">
         <StackLayout class="movie-card">
@@ -12,6 +17,7 @@
       </ng-container>
     </StackLayout>
   </ScrollView>
-  
-  <Label *ngIf="movies.length === 0" text="Nenhum filme encontrado"></Label>
-  
+
+  <!-- Mensagem caso nenhum filme seja encontrado -->
+  <Label *ngIf="movies.length === 0" text="Nenhum filme encontrado" class="no-movies-message"></Label>
+</StackLayout>

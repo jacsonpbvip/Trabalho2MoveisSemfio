@@ -1,0 +1,20 @@
+<StackLayout>
+    <Label text="Procure um filme" class="highlight-title"></Label>
+    <!-- Campo de busca e botão -->
+    <TextField [text]="query" (textChange)="onQueryChange($event)" hint="Digite o título do filme"></TextField>
+    <Button text="Buscar" (tap)="findMovieByTitle()"></Button>
+    <Label *ngIf="isLoading" text="Carregando..."></Label>
+    <Label *ngIf="errorMessage" [text]="errorMessage" class="error-label"></Label>
+    
+    <!-- ScrollView para permitir rolagem -->
+    <ScrollView *ngIf="!isLoading && searchResults.length > 0">
+      <StackLayout>
+        <StackLayout *ngFor="let item of searchResults" class="movie-item">
+          <Image [src]="item.poster_path ? 'https://image.tmdb.org/t/p/w500' + item.poster_path : 'path/to/placeholder-image.png'" height="200"/>
+          <Label [text]="item.original_title" class="movie-title"></Label>
+          <Label [text]="item.overview" class="movie-overview"></Label>
+        </StackLayout>
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+  

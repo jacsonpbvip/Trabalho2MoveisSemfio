@@ -3,9 +3,9 @@
   }
   
   .movie-poster {    
-    margin: 0 10%; /* Deixa 10% de margem em cada lado */
+    margin: 0 10%; 
     margin-bottom: 20px;
-    object-fit: cover; /* Ajusta a imagem para não distorcer */
+    object-fit: cover; 
   }
   
   .movie-info {
@@ -22,11 +22,11 @@
   }
   
   .movie-overview {
-    font-size: 16px; /* Ajuste o tamanho conforme necessário */
+    font-size: 16px; 
     color: #666;
-    white-space: normal; /* Quebra de linha normal */
+    white-space: normal; 
     
-    margin: 0 10px; /* Adiciona margem lateral para o texto */
-    word-wrap: break-word; /* Quebra palavras longas para ajustar ao layout */
+    margin: 0 10px; 
+    word-wrap: break-word; 
   }
   
