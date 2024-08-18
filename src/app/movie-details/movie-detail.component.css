@@ -1,0 +1,32 @@
+.movie-detail-container {
+    padding: 10px;    
+  }
+  
+  .movie-poster {    
+    margin: 0 10%; /* Deixa 10% de margem em cada lado */
+    margin-bottom: 20px;
+    object-fit: cover; /* Ajusta a imagem para não distorcer */
+  }
+  
+  .movie-info {
+    width: 100%;    
+   
+  }
+  
+  .movie-title {
+    margin-top: 10px;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    
+  }
+  
+  .movie-overview {
+    font-size: 16px; /* Ajuste o tamanho conforme necessário */
+    color: #666;
+    white-space: normal; /* Quebra de linha normal */
+    
+    margin: 0 10px; /* Adiciona margem lateral para o texto */
+    word-wrap: break-word; /* Quebra palavras longas para ajustar ao layout */
+  }
+  

@@ -1,0 +1,10 @@
+<ScrollView>
+    <StackLayout *ngIf="movie" class="movie-detail-container">
+      <Image [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" class="movie-poster"></Image>
+      <StackLayout class="movie-info">
+        <Label [text]="movie.title" class="movie-title"></Label>
+        <Label [text]="movie.overview" class="movie-overview"></Label>
+      </StackLayout>
+    </StackLayout>
+  </ScrollView>
+  

@@ -1,0 +1,17 @@
+<ScrollView orientation="horizontal">
+    <StackLayout orientation="horizontal" class="movie-list">
+      <ng-container *ngFor="let movie of movies">
+        <StackLayout class="movie-card">
+          <Image *ngIf="movie.poster_path"
+                 [src]="getImageUrl(movie.poster_path)"
+                 class="movie-poster"
+                 stretch="aspectFill"
+                 (tap)="onMovieTap(movie)"></Image>
+          <Label [text]="movie.title" class="movie-title"></Label>
+        </StackLayout>
+      </ng-container>
+    </StackLayout>
+  </ScrollView>
+  
+  <Label *ngIf="movies.length === 0" text="Nenhum filme encontrado"></Label>
+  

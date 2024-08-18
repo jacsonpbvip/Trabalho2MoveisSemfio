@@ -1,0 +1,36 @@
+.movie-list {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  
+  .movie-card {
+    width: 350px; /* Ajuste conforme necessário */
+    margin-right: 10px; /* Espaço entre cartões */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    text-align: center; /* Centraliza o texto */
+  }
+  
+  .movie-poster {
+    width: 100%;
+    height: 600px; /* Ajuste conforme necessário */
+    object-fit: cover; /* Mantém a proporção da imagem */
+  }
+  
+  .movie-title {
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px; /* Espaçamento entre título e sinopse */
+  }
+  
+  .movie-overview {
+    margin-top: 5px;
+    text-align: center; /* Centraliza o texto da sinopse */
+  }
+  
